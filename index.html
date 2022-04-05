@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Loading, please wait...</p>
+    <script>
+        while(true){
+            let n = Math.floor(Math.random() * 1000);
+            console.log('Загадано:', n);
+            let guess = prompt('Введите число от 0 до 999');
+            console.log('Введено:', guess);
+            if (isNaN(guess) || (guess >= 1000)) {
+                alert('Введено некорректное значение');
+            }
+            if (guess == n) {
+                alert('Вы угадали!');
+            }
+            if (guess < n) {
+                alert('Больше!');
+            }
+            if (guess > n) {
+                alert('Меньше!');
+            }
+        }
+      </script>
+</body>
+</html>
